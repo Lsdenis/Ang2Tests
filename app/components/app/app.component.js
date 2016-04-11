@@ -1,4 +1,4 @@
-System.register(["angular2/core", "../appartments/appartments.component"], function(exports_1, context_1) {
+System.register(["angular2/core", "../appartments/appartments.component", "../appartment-detail/appartment-detail.component", 'angular2/router'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(["angular2/core", "../appartments/appartments.component"], funct
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, appartments_component_1;
+    var core_1, appartments_component_1, appartment_detail_component_1, router_1;
     var AppComponent;
     return {
         setters:[
@@ -19,18 +19,29 @@ System.register(["angular2/core", "../appartments/appartments.component"], funct
             },
             function (appartments_component_1_1) {
                 appartments_component_1 = appartments_component_1_1;
+            },
+            function (appartment_detail_component_1_1) {
+                appartment_detail_component_1 = appartment_detail_component_1_1;
+            },
+            function (router_1_1) {
+                router_1 = router_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
                 function AppComponent() {
-                    this.title = "Appartments";
+                    this.title = "Арендатор.бай";
                 }
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: "arendator",
                         templateUrl: "app/components/app/app.component.html",
-                        directives: [appartments_component_1.AppartmentsComponent]
-                    }), 
+                        directives: [router_1.ROUTER_DIRECTIVES],
+                        providers: [router_1.ROUTER_PROVIDERS]
+                    }),
+                    router_1.RouteConfig([
+                        { path: "/", name: "Appartments", component: appartments_component_1.AppartmentsComponent },
+                        { path: "/Appartment", name: "AppDetail", component: appartment_detail_component_1.AppDetailComponent },
+                    ]), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
                 return AppComponent;

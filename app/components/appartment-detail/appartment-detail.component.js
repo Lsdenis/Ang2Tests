@@ -27,7 +27,7 @@ System.register(["angular2/core", "../../classes/appartment"], function(exports_
                 __decorate([
                     core_1.Input(), 
                     __metadata('design:type', appartment_1.Appartment)
-                ], AppDetailComponent.prototype, "app", void 0);
+                ], AppDetailComponent.prototype, "appartment", void 0);
                 AppDetailComponent = __decorate([
                     core_1.Component({
                         selector: "appartment-detail",

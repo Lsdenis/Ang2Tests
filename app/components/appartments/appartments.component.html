@@ -1,4 +1,22 @@
-<ul>
-  <li *ngFor="#app of appartments" (click)='onSelect(app)'>{{app.Title}}</li>
-</ul>
-<app-detail [app]="selectedApp"></app-detail>
+<div class="row" *ngFor="#app of appartments">
+  <div class="col s12 m6 push-m3">
+    <div class="card">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="{{app.UrlPhotoPreview}}">
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">{{app.Title}}<i class="right">{{app.Price}}$</i></span>
+        <p>{{app.Description}}</p>
+        <p>          
+            <a [routerLink]="['AppDetail']">Подробнее</a>
+        </p>
+      </div>
+      <!-- <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+    </div> -->
+  </div>
+</div>
+</div>
+
+<appartment-detail [app]="selectedApp"></appartment-detail>

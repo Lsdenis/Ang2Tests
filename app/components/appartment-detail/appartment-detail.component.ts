@@ -8,5 +8,5 @@ import {Appartment} from "../../classes/appartment";
 
 export class AppDetailComponent {
   @Input()
-  public app: Appartment;
+  public appartment: Appartment;
 }

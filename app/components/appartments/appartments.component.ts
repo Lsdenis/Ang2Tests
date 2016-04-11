@@ -2,6 +2,7 @@ import {Component} from "angular2/core";
 import {Appartment} from "../../classes/appartment";
 import {AppartmentsService} from "../../services/appartments.service";
 import {AppDetailComponent} from "../appartment-detail/appartment-detail.component";
+import { Router } from 'angular2/router';
 
 @Component({
   selector: "appartments",
@@ -20,7 +21,7 @@ export class AppartmentsComponent {
     this.selectedApp = app;
   }
 
-  constructor(private _appService: AppartmentsService) {
+  constructor(private _router: Router, private _appService: AppartmentsService) {
     _appService.getAppartments().subscribe(
           data => { this.appartments = data.Data.Items },
           err => { this.error = err }

@@ -1,4 +1,4 @@
-System.register(["angular2/core", "../../services/appartments.service", "../appartment-detail/appartment-detail.component"], function(exports_1, context_1) {
+System.register(["angular2/core", "../../services/appartments.service", "../appartment-detail/appartment-detail.component", 'angular2/router'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(["angular2/core", "../../services/appartments.service", "../appa
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, appartments_service_1, appartment_detail_component_1;
+    var core_1, appartments_service_1, appartment_detail_component_1, router_1;
     var AppartmentsComponent;
     return {
         setters:[
@@ -22,11 +22,15 @@ System.register(["angular2/core", "../../services/appartments.service", "../appa
             },
             function (appartment_detail_component_1_1) {
                 appartment_detail_component_1 = appartment_detail_component_1_1;
+            },
+            function (router_1_1) {
+                router_1 = router_1_1;
             }],
         execute: function() {
             AppartmentsComponent = (function () {
-                function AppartmentsComponent(_appService) {
+                function AppartmentsComponent(_router, _appService) {
                     var _this = this;
+                    this._router = _router;
                     this._appService = _appService;
                     _appService.getAppartments().subscribe(function (data) { _this.appartments = data.Data.Items; }, function (err) { _this.error = err; });
                 }
@@ -40,7 +44,7 @@ System.register(["angular2/core", "../../services/appartments.service", "../appa
                         providers: [appartments_service_1.AppartmentsService],
                         directives: [appartment_detail_component_1.AppDetailComponent]
                     }), 
-                    __metadata('design:paramtypes', [appartments_service_1.AppartmentsService])
+                    __metadata('design:paramtypes', [router_1.Router, appartments_service_1.AppartmentsService])
                 ], AppartmentsComponent);
                 return AppartmentsComponent;
             }());
