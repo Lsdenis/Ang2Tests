@@ -11,8 +11,8 @@ private data: JSON;
   }
 
   getAppartments() {
-    return this.http.get("http://localhost:63899/api/Apartment/GetApartments?direction=1&startId=")
-    // return this.http.get("http://apiarendator.azurewebsites.net/api/Apartment/GetApartments?direction=1&startId=")
+    // return this.http.get("http://localhost:63899/api/Apartment/GetApartments?direction=1&startId=")
+    return this.http.get("http://apiarendator.azurewebsites.net/api/Apartment/GetApartments?direction=1&startId=")
     // return this.http.get("http://flimsapi-denisp.rhcloud.com/api/films")
     .map(res => res.json());
 //       .subscribe(

@@ -26,7 +26,8 @@ System.register(["angular2/core", "angular2/http"], function(exports_1, context_
                     this.http = http;
                 }
                 AppartmentsService.prototype.getAppartments = function () {
-                    return this.http.get("http://localhost:63899/api/Apartment/GetApartments?direction=1&startId=")
+                    // return this.http.get("http://localhost:63899/api/Apartment/GetApartments?direction=1&startId=")
+                    return this.http.get("http://apiarendator.azurewebsites.net/api/Apartment/GetApartments?direction=1&startId=")
                         .map(function (res) { return res.json(); });
                     //       .subscribe(
                     //         data => { this.data = data },
