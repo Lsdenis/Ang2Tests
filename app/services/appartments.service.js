@@ -26,11 +26,14 @@ System.register(["angular2/core", "angular2/http"], function(exports_1, context_
                     this.http = http;
                 }
                 AppartmentsService.prototype.getAppartments = function () {
-                    var _this = this;
-                    // return this.http.get("http://apiarendator.azurewebsites.net/api/Apartment/GetApartments?direction=1&startId=")
-                    return this.http.get("http://flimsapi-denisp.rhcloud.com/api/films")
-                        .map(function (res) { return res.json(); })
-                        .subscribe(function (data) { _this.data = data; }, function (err) { return console.error(err); }, function () { return console.log(_this.data); });
+                    return this.http.get("http://localhost:63899/api/Apartment/GetApartments?direction=1&startId=")
+                        .map(function (res) { return res.json(); });
+                    //       .subscribe(
+                    //         data => { this.data = data },
+                    //         err => console.error(err)
+                    //       );
+                    // debugger;
+                    //       return this.data;
                 };
                 AppartmentsService = __decorate([
                     core_1.Injectable(), 

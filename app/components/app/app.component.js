@@ -1,4 +1,4 @@
-System.register(["angular2/core", "./services/appartments.service"], function(exports_1, context_1) {
+System.register(["angular2/core", "../appartments/appartments.component"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,38 +10,28 @@ System.register(["angular2/core", "./services/appartments.service"], function(ex
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, appartments_service_1;
-    var APPARTMENTS, AppComponent;
+    var core_1, appartments_component_1;
+    var AppComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             },
-            function (appartments_service_1_1) {
-                appartments_service_1 = appartments_service_1_1;
+            function (appartments_component_1_1) {
+                appartments_component_1 = appartments_component_1_1;
             }],
         execute: function() {
-            APPARTMENTS = [
-                { "street": "first", "image": "first" },
-                { "street": "second", "image": "second" },
-                { "street": "third", "image": "third" },
-            ];
             AppComponent = (function () {
-                function AppComponent(_appService) {
-                    this._appService = _appService;
-                    this.title = 'Appartments';
-                    this.appartments = _appService.getAppartments();
+                function AppComponent() {
+                    this.title = "Appartments";
                 }
-                AppComponent.prototype.onSelect = function (app) {
-                    this.selectedApp = app;
-                };
                 AppComponent = __decorate([
                     core_1.Component({
-                        selector: "my-app",
-                        template: "\n    <h3>{{title}}</h3>",
-                        providers: [appartments_service_1.AppartmentsService]
+                        selector: "arendator",
+                        templateUrl: "app/components/app/app.component.html",
+                        directives: [appartments_component_1.AppartmentsComponent]
                     }), 
-                    __metadata('design:paramtypes', [appartments_service_1.AppartmentsService])
+                    __metadata('design:paramtypes', [])
                 ], AppComponent);
                 return AppComponent;
             }());

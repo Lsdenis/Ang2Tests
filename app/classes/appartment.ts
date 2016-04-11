@@ -1,4 +1,3 @@
 export class Appartment {
-  street: string;
-  image: string;
+  Title: string;
 }

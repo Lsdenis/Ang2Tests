@@ -1,0 +1,4 @@
+<ul>
+  <li *ngFor="#app of appartments" (click)='onSelect(app)'>{{app.Title}}</li>
+</ul>
+<app-detail [app]="selectedApp"></app-detail>
