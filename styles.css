@@ -1,0 +1,32 @@
+nav {
+  background-color: #42b5d5;
+}
+
+nav img {
+  width: 64px;
+}
+
+.slider .slides {
+  background-color: white;
+}
+
+.custom-slider {
+  height: 790px;
+}
+
+.slider .slides li img {
+  width: 600px;
+  height: 600px;
+}
+
+.slider .slides li .caption {
+  top: 5%;
+}
+
+.slider .col.m4 {
+  padding-top: 25%;
+}
+
+.slider .indicators .indicator-item.active {
+  background-color: #42b5d5;
+}

@@ -1,9 +1,11 @@
-import {Component, Input} from "angular2/core";
-import {Appartment} from "../../classes/appartment";
+import { Component, Input }   from "angular2/core";
+import { Appartment }         from "../../classes/appartment";
+import { ComponentSelectors } from "../component-selectors";
+import { Constants }          from "../../constants";
 
 @Component ({
-  selector: "appartment-detail",
-  templateUrl: "app/components/appartment-detail/appartment-detail.component.html"
+  selector: ComponentSelectors.APPARTMENT_DETAIL,
+  templateUrl: Constants.TEMPLATE_URL_PATH + "appartment-detail.component.html"
 })
 
 export class AppDetailComponent {

@@ -1,4 +1,4 @@
-System.register(["angular2/core", "../appartments/appartments.component", "../appartment-detail/appartment-detail.component", 'angular2/router'], function(exports_1, context_1) {
+System.register(["angular2/core", "../appartments/appartments.component", "angular2/router", "../component-selectors", "../home/home.component", "../../constants"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(["angular2/core", "../appartments/appartments.component", "../ap
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, appartments_component_1, appartment_detail_component_1, router_1;
+    var core_1, appartments_component_1, router_1, component_selectors_1, home_component_1, constants_1;
     var AppComponent;
     return {
         setters:[
@@ -20,11 +20,17 @@ System.register(["angular2/core", "../appartments/appartments.component", "../ap
             function (appartments_component_1_1) {
                 appartments_component_1 = appartments_component_1_1;
             },
-            function (appartment_detail_component_1_1) {
-                appartment_detail_component_1 = appartment_detail_component_1_1;
-            },
             function (router_1_1) {
                 router_1 = router_1_1;
+            },
+            function (component_selectors_1_1) {
+                component_selectors_1 = component_selectors_1_1;
+            },
+            function (home_component_1_1) {
+                home_component_1 = home_component_1_1;
+            },
+            function (constants_1_1) {
+                constants_1 = constants_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
@@ -33,14 +39,14 @@ System.register(["angular2/core", "../appartments/appartments.component", "../ap
                 }
                 AppComponent = __decorate([
                     core_1.Component({
-                        selector: "arendator",
-                        templateUrl: "app/components/app/app.component.html",
+                        selector: component_selectors_1.ComponentSelectors.ARENDATOR,
+                        templateUrl: constants_1.Constants.TEMPLATE_URL_PATH + "app.component.html",
                         directives: [router_1.ROUTER_DIRECTIVES],
                         providers: [router_1.ROUTER_PROVIDERS]
                     }),
                     router_1.RouteConfig([
-                        { path: "/", name: "Appartments", component: appartments_component_1.AppartmentsComponent },
-                        { path: "/Appartment", name: "AppDetail", component: appartment_detail_component_1.AppDetailComponent },
+                        { path: "/Home", name: "Home", component: home_component_1.HomeComponent, useAsDefault: true },
+                        { path: "/Appartments", name: "Appartments", component: appartments_component_1.AppartmentsComponent },
                     ]), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);

@@ -1,4 +1,4 @@
-System.register(["angular2/core", "../../services/appartments.service", "../appartment-detail/appartment-detail.component", 'angular2/router'], function(exports_1, context_1) {
+System.register(["angular2/core", "../../services/appartments.service", 'angular2/router', "../component-selectors", "../../constants"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(["angular2/core", "../../services/appartments.service", "../appa
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, appartments_service_1, appartment_detail_component_1, router_1;
+    var core_1, appartments_service_1, router_1, component_selectors_1, constants_1;
     var AppartmentsComponent;
     return {
         setters:[
@@ -20,11 +20,14 @@ System.register(["angular2/core", "../../services/appartments.service", "../appa
             function (appartments_service_1_1) {
                 appartments_service_1 = appartments_service_1_1;
             },
-            function (appartment_detail_component_1_1) {
-                appartment_detail_component_1 = appartment_detail_component_1_1;
-            },
             function (router_1_1) {
                 router_1 = router_1_1;
+            },
+            function (component_selectors_1_1) {
+                component_selectors_1 = component_selectors_1_1;
+            },
+            function (constants_1_1) {
+                constants_1 = constants_1_1;
             }],
         execute: function() {
             AppartmentsComponent = (function () {
@@ -39,10 +42,10 @@ System.register(["angular2/core", "../../services/appartments.service", "../appa
                 };
                 AppartmentsComponent = __decorate([
                     core_1.Component({
-                        selector: "appartments",
-                        templateUrl: "app/components/appartments/appartments.component.html",
+                        selector: component_selectors_1.ComponentSelectors.APPARTMENTS,
+                        templateUrl: constants_1.Constants.TEMPLATE_URL_PATH + "appartments.component.html",
                         providers: [appartments_service_1.AppartmentsService],
-                        directives: [appartment_detail_component_1.AppDetailComponent]
+                        directives: [router_1.ROUTER_DIRECTIVES]
                     }), 
                     __metadata('design:paramtypes', [router_1.Router, appartments_service_1.AppartmentsService])
                 ], AppartmentsComponent);

@@ -1,4 +1,4 @@
-System.register(["angular2/core", "../../classes/appartment"], function(exports_1, context_1) {
+System.register(["angular2/core", "../../classes/appartment", "../component-selectors", "../../constants"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(["angular2/core", "../../classes/appartment"], function(exports_
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, appartment_1;
+    var core_1, appartment_1, component_selectors_1, constants_1;
     var AppDetailComponent;
     return {
         setters:[
@@ -19,6 +19,12 @@ System.register(["angular2/core", "../../classes/appartment"], function(exports_
             },
             function (appartment_1_1) {
                 appartment_1 = appartment_1_1;
+            },
+            function (component_selectors_1_1) {
+                component_selectors_1 = component_selectors_1_1;
+            },
+            function (constants_1_1) {
+                constants_1 = constants_1_1;
             }],
         execute: function() {
             AppDetailComponent = (function () {
@@ -30,8 +36,8 @@ System.register(["angular2/core", "../../classes/appartment"], function(exports_
                 ], AppDetailComponent.prototype, "appartment", void 0);
                 AppDetailComponent = __decorate([
                     core_1.Component({
-                        selector: "appartment-detail",
-                        templateUrl: "app/components/appartment-detail/appartment-detail.component.html"
+                        selector: component_selectors_1.ComponentSelectors.APPARTMENT_DETAIL,
+                        templateUrl: constants_1.Constants.TEMPLATE_URL_PATH + "appartment-detail.component.html"
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppDetailComponent);

@@ -1,18 +1,21 @@
-import {Component} from "angular2/core";
-import {AppartmentsComponent} from "../appartments/appartments.component";
-import {AppDetailComponent} from "../appartment-detail/appartment-detail.component";
-import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
+import { Component }                                        from "angular2/core";
+import { AppartmentsComponent }                             from "../appartments/appartments.component";
+import { AppDetailComponent }                               from "../appartment-detail/appartment-detail.component";
+import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from "angular2/router";
+import { ComponentSelectors }                               from "../component-selectors";
+import { HomeComponent }                                    from "../home/home.component";
+import { Constants }                                        from "../../constants";
 
 @Component({
-  selector: "arendator",
-  templateUrl: "app/components/app/app.component.html",
+  selector: ComponentSelectors.ARENDATOR,
+  templateUrl: Constants.TEMPLATE_URL_PATH + "app.component.html",
   directives: [ROUTER_DIRECTIVES],
   providers: [ROUTER_PROVIDERS]
 })
 
 @RouteConfig([
-  { path: "/", name: "Appartments", component: AppartmentsComponent },
-  { path: "/Appartment", name: "AppDetail", component: AppDetailComponent },
+  { path: "/Home", name: "Home", component: HomeComponent, useAsDefault: true },
+  { path: "/Appartments", name: "Appartments", component: AppartmentsComponent },
 ])
 
 export class AppComponent {
