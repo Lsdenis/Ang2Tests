@@ -2,12 +2,15 @@
   <nav>
     <div class="container">
       <div class="nav-wrapper">
-        <a [routerLink]="['Home']" class="brand-logo"><img src="app/content/images/house-128.png"/></a>
-        <p class="center flow-text">{{title}}</p>
+        <a [routerLink]="['Home']" class=""><img src="app/content/images/house-128.png"/></a>
+        <a class="brand-logo center flow-text">{{title}}</a>
         <!-- <ul class="right side-nav" id="nav-mobile" style="transform: translateX(-100%);">
         <li class="hide-on-small-only"><a href="parallax.html"><i class="mdi-navigation-arrow-back"></i></a></li>
       </ul>
       <a class="button-collapse" href="#" data-activates="nav-mobile"><i class="mdi-navigation-menu"></i></a> -->
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a [routerLink]='["Appartments"]'>Апартаменты</a></li>
+      </ul>
     </div>
   </div>
 </nav>

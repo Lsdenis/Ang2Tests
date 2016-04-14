@@ -1,4 +1,4 @@
-System.register(["angular2/core", "angular2/http"], function(exports_1, context_1) {
+System.register(["angular2/core", "angular2/http", "../constants"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(["angular2/core", "angular2/http"], function(exports_1, context_
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, http_1;
+    var core_1, http_1, constants_1;
     var AppartmentsService;
     return {
         setters:[
@@ -19,6 +19,9 @@ System.register(["angular2/core", "angular2/http"], function(exports_1, context_
             },
             function (http_1_1) {
                 http_1 = http_1_1;
+            },
+            function (constants_1_1) {
+                constants_1 = constants_1_1;
             }],
         execute: function() {
             AppartmentsService = (function () {
@@ -27,7 +30,7 @@ System.register(["angular2/core", "angular2/http"], function(exports_1, context_
                 }
                 AppartmentsService.prototype.getAppartments = function () {
                     // return this.http.get("http://localhost:63899/api/Apartment/GetApartments?direction=1&startId=")
-                    return this.http.get("http://apiarendator.azurewebsites.net/api/Apartment/GetApartments?direction=1&startId=")
+                    return this.http.get(constants_1.Constants.API_URL + "api/Apartment/GetApartments?direction=1&startId=")
                         .map(function (res) { return res.json(); });
                 };
                 AppartmentsService = __decorate([
@@ -40,4 +43,4 @@ System.register(["angular2/core", "angular2/http"], function(exports_1, context_
         }
     }
 });
-//# sourceMappingURL=appartments.service.js.map
+//# sourceMappingURL=appartments.service.ts.LOCAL.8408.js.map
