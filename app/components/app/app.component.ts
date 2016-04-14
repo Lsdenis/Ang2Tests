@@ -1,4 +1,4 @@
-import { Component }                                        from "angular2/core";
+﻿import { Component }                                        from "angular2/core";
 import { AppartmentsComponent }                             from "../appartments/appartments.component";
 import { AppDetailComponent }                               from "../appartment-detail/appartment-detail.component";
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from "angular2/router";
