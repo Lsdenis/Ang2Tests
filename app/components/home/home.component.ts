@@ -17,21 +17,21 @@ export class HomeComponent implements OnInit {
   }
 
   private _slider: any;
+  private _isInitialized: Boolean;
 
   ngOnInit() {
-    //   var options = [
-    //   {selector: '.class', offset: 200, callback: customCallbackFunc } },
-    //   {selector: '.other-class', offset: 200, callback: function() {
-    //     customCallbackFunc();
-    //   } },
-    // ];
     $(this._element.nativeElement).find(".parallax").parallax();
     this._slider = $(this._element.nativeElement).find(".slider");
 
-    var options = [
-      { selector: '.parallax', offset: 1350, callback: () => this._slider.slider({ height: "750px", interval: 3000, transition: 750 })
- },
-    ];
-    Materialize.scrollFire(options);
+    this._slider.scrollspy({
+      min: this._slider.offset().top - 150,
+      onEnter: () => {
+        if (!this._isInitialized)
+        {
+          this._slider.slider({ height: "100%", interval: 4000, transition: 750 });
+          this._isInitialized = true;
+        }
+      }
+    });
   }
 }

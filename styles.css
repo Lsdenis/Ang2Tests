@@ -1,5 +1,6 @@
 nav {
   background-color: #42b5d5;
+  z-index: 9;
 }
 
 nav img {
@@ -11,12 +12,18 @@ nav img {
 }
 
 .custom-slider {
-  height: 790px;
+    height: 70%;
+}
+
+@media screen and (max-device-width: 1259px) {
+  .custom-slider {
+      height: 55%;
+  }
 }
 
 .slider .slides li img {
-  width: 600px;
-  height: 600px;
+    width: 100%;
+    height: auto;
 }
 
 .slider .slides li .caption {
@@ -24,9 +31,25 @@ nav img {
 }
 
 .slider .col.m4 {
-  padding-top: 25%;
+  padding-top: 20%;
 }
 
 .slider .indicators .indicator-item.active {
   background-color: #42b5d5;
+}
+
+.parallax-custom-size-1 {
+  height: 700px;
+}
+
+.fp-controlArrow.fp-next {
+  border-left-color: black;
+}
+
+.asd {
+  text-shadow:
+   -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
 }

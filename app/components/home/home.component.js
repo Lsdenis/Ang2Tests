@@ -33,19 +33,17 @@ System.register(["angular2/core", "../component-selectors", "../../constants", "
                 }
                 HomeComponent.prototype.ngOnInit = function () {
                     var _this = this;
-                    //   var options = [
-                    //   {selector: '.class', offset: 200, callback: customCallbackFunc } },
-                    //   {selector: '.other-class', offset: 200, callback: function() {
-                    //     customCallbackFunc();
-                    //   } },
-                    // ];
                     $(this._element.nativeElement).find(".parallax").parallax();
                     this._slider = $(this._element.nativeElement).find(".slider");
-                    var options = [
-                        { selector: '.parallax', offset: 1350, callback: function () { return _this._slider.slider({ height: "750px", interval: 3000, transition: 750 }); }
-                        },
-                    ];
-                    Materialize.scrollFire(options);
+                    this._slider.scrollspy({
+                        min: this._slider.offset().top - 150,
+                        onEnter: function () {
+                            if (!_this._isInitialized) {
+                                _this._slider.slider({ height: "100%", interval: 4000, transition: 750 });
+                                _this._isInitialized = true;
+                            }
+                        }
+                    });
                 };
                 HomeComponent = __decorate([
                     core_1.Component({

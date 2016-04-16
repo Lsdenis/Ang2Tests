@@ -1,7 +1,7 @@
-<div class="row" *ngFor="#app of appartments">
-  <div class="col s12 m6 push-m3">
+<div class="row">
+  <div class="col s12 m4" *ngFor="#app of appartments">
     <div class="card">
-      <div class="card-image">
+      <div class="card-image" *ngIf="app.UrlPhotoPreview">
         <img class="" src="{{app.UrlPhotoPreview}}">
       </div>
       <div class="card-content">
