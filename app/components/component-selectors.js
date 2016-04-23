@@ -12,6 +12,7 @@ System.register([], function(exports_1, context_1) {
                 ComponentSelectors.APPARTMENT_DETAIL = "appartment-detail";
                 ComponentSelectors.ARENDATOR = "arendator";
                 ComponentSelectors.HOME = "home";
+                ComponentSelectors.GOOGLE = "google";
                 return ComponentSelectors;
             }());
             exports_1("ComponentSelectors", ComponentSelectors);

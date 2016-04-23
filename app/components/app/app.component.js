@@ -1,4 +1,4 @@
-System.register(["angular2/core", "../appartments/appartments.component", "angular2/router", "../component-selectors", "../home/home.component", "../../constants"], function(exports_1, context_1) {
+System.register(["angular2/core", "../appartments/appartments.component", "angular2/router", "../component-selectors", "../home/home.component", "../../constants", "../google-verification/google.verification.component"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(["angular2/core", "../appartments/appartments.component", "angul
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, appartments_component_1, router_1, component_selectors_1, home_component_1, constants_1;
+    var core_1, appartments_component_1, router_1, component_selectors_1, home_component_1, constants_1, google_verification_component_1;
     var AppComponent;
     return {
         setters:[
@@ -31,6 +31,9 @@ System.register(["angular2/core", "../appartments/appartments.component", "angul
             },
             function (constants_1_1) {
                 constants_1 = constants_1_1;
+            },
+            function (google_verification_component_1_1) {
+                google_verification_component_1 = google_verification_component_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
@@ -47,6 +50,7 @@ System.register(["angular2/core", "../appartments/appartments.component", "angul
                     router_1.RouteConfig([
                         { path: "/Home", name: "Home", component: home_component_1.HomeComponent, useAsDefault: true },
                         { path: "/Appartments", name: "Appartments", component: appartments_component_1.AppartmentsComponent },
+                        { path: "/google2e04601e52ed19c3", name: "Google", component: google_verification_component_1.GoogleComponent },
                     ]), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);

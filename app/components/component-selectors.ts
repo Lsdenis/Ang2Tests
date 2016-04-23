@@ -3,4 +3,5 @@ export abstract class ComponentSelectors {
   static APPARTMENT_DETAIL: string = "appartment-detail";
   static ARENDATOR: string = "arendator";
   static HOME: string = "home";
+  static GOOGLE: string = "google";
 }

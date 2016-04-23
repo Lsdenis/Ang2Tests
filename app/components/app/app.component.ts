@@ -5,6 +5,7 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from "angular2/route
 import { ComponentSelectors }                               from "../component-selectors";
 import { HomeComponent }                                    from "../home/home.component";
 import { Constants }                                        from "../../constants";
+import { GoogleComponent }                                  from "../google-verification/google.verification.component";
 
 @Component({
   selector: ComponentSelectors.ARENDATOR,
@@ -16,6 +17,7 @@ import { Constants }                                        from "../../constant
 @RouteConfig([
   { path: "/Home", name: "Home", component: HomeComponent, useAsDefault: true },
   { path: "/Appartments", name: "Appartments", component: AppartmentsComponent },
+  { path: "/google2e04601e52ed19c3", name: "Google", component: GoogleComponent },
 ])
 
 export class AppComponent {
