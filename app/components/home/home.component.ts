@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
     this._slider = $(this._element.nativeElement).find(".slider");
 
     this._slider.scrollspy({
-      min: this._slider.offset().top - 150,
+      min: this._slider.offset().top - 550,
       onEnter: () => {
         if (!this._isInitialized)
         {

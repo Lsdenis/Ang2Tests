@@ -36,7 +36,7 @@ System.register(["angular2/core", "../component-selectors", "../../constants", "
                     $(this._element.nativeElement).find(".parallax").parallax();
                     this._slider = $(this._element.nativeElement).find(".slider");
                     this._slider.scrollspy({
-                        min: this._slider.offset().top - 150,
+                        min: this._slider.offset().top - 550,
                         onEnter: function () {
                             if (!_this._isInitialized) {
                                 _this._slider.slider({ height: "100%", interval: 4000, transition: 750 });

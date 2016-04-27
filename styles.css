@@ -1,3 +1,12 @@
+@font-face {
+  font-family: HelveticaNeueCyrUltraLight;
+  src: url("./app/content/fonts/HelveticaNeueCyr-UltraLight.otf");
+}
+
+html {
+  font-family: "HelveticaNeueCyrUltraLight";
+}
+
 nav {
   background-color: #42b5d5;
   z-index: 9;
@@ -12,7 +21,7 @@ nav img {
 }
 
 .custom-slider {
-    height: 75%;
+    height: 420px;
 }
 
 @media screen and (max-device-width: 1259px) {
@@ -22,8 +31,8 @@ nav img {
 }
 
 .slider .slides li img {
-    width: 100%;
-    height: auto;
+    width: 23.33333333333333em;
+    height: 23.33333333333333em;
 }
 
 .slider .slides li .caption {
@@ -31,7 +40,7 @@ nav img {
 }
 
 .slider .col.m4 {
-  padding-top: 20%;
+  /*padding-top: 20%;*/
 }
 
 .slider .indicators .indicator-item.active {
@@ -46,10 +55,40 @@ nav img {
   border-left-color: black;
 }
 
-.asd {
-  text-shadow:
-   -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-     1px 1px 0 #000;
+.image-logo-div {
+  background: url("./app/content/images/logo-image.png") center;
+  height: 630px;
+  padding-top: 3.1333em;
+}
+
+.main-header {
+  font-size: 3.3333em;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.028em;
+  margin: 0;
+}
+
+.suggestion-header {
+  font-size: 2.6666em;
+  color: #42b5d5;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 22px;
+}
+
+.carousel-caption {  
+  color: #42b5d5;
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.image-google-play {
+  width: 11.8em;
+}
+
+.slider .indicators .indicator-item {
+  margin: 0 0.333em;
 }
