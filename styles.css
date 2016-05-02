@@ -31,8 +31,8 @@ nav img {
 }
 
 .slider .slides li img {
-    width: 23.33333333333333em;
-    height: 23.33333333333333em;
+    max-width: 23.33333333333333em;
+    height: auto;
 }
 
 .slider .slides li .caption {
@@ -56,7 +56,7 @@ nav img {
 }
 
 .image-logo-div {
-  background: url("./app/content/images/logo-image.png") center;
+  background: url("./app/content/images/background.png") center;
   height: 630px;
   padding-top: 3.1333em;
 }
@@ -91,4 +91,57 @@ nav img {
 
 .slider .indicators .indicator-item {
   margin: 0 0.333em;
+}
+
+.logo {
+  height: 40%;
+  opacity: 0.7;
+}
+
+.logo-div {
+  margin-top: 65px;
+}
+
+@media (max-width: 425px) { 
+  .main-header {
+    font-size: 2em;
+  }
+  
+    .custom-slider {
+      height: 50%;
+  }
+  
+  .image-logo-div {
+    height: 500px;
+  }
+}
+
+@media (max-width: 320px) {
+  
+  .carousel-caption {    
+    font-size: 1.69em;
+  }
+  
+    .custom-slider {
+      height: 42%;
+  }
+}
+
+@media (min-width: 993px) {
+  
+  .carousel-caption {
+    margin-top: 55%;
+  }
+}
+
+@media (min-width: 1265px) {  
+  .image-logo-div {
+    background: url("./app/content/images/background-large.png") center;
+  }
+}
+
+@media (min-width: 1265px) {  
+  .image-logo-div {
+    background: url("./app/content/images/background-large.png") center;
+  }
 }
