@@ -15,7 +15,7 @@ import { GoogleComponent }                                  from "../google-veri
 })
 
 @RouteConfig([
-  { path: "/Home", name: "Home", component: HomeComponent, useAsDefault: true },
+  { path: "/", name: "Home", component: HomeComponent, useAsDefault: true },
   { path: "/Appartments", name: "Appartments", component: AppartmentsComponent },
   { path: "/google2e04601e52ed19c3", name: "Google", component: GoogleComponent },
 ])

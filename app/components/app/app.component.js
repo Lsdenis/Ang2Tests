@@ -48,7 +48,7 @@ System.register(["angular2/core", "../appartments/appartments.component", "angul
                         providers: [router_1.ROUTER_PROVIDERS]
                     }),
                     router_1.RouteConfig([
-                        { path: "/Home", name: "Home", component: home_component_1.HomeComponent, useAsDefault: true },
+                        { path: "/", name: "Home", component: home_component_1.HomeComponent, useAsDefault: true },
                         { path: "/Appartments", name: "Appartments", component: appartments_component_1.AppartmentsComponent },
                         { path: "/google2e04601e52ed19c3", name: "Google", component: google_verification_component_1.GoogleComponent },
                     ]), 
