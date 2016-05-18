@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="арендатор бай, Минск, снять квартиру, снять комнату, снять дом, аренда квартир, аренда квартир на длительный срок, аренда без посредников, аренда комнат, аренда комнат на длительны срок, арендатор, аренда в Минске, аренда в Беларуси" />
+    <meta name="description" content="Объявления об аренде квартир, комнат в Минске. Бесплатное размещение объявлений. Подписка на новые предложения." />
+
+    <!-- 1. Load libraries -->
+    <!-- IE required polyfills, in this exact order -->
+    @*    <script src="node_modules/es6-shim/es6-shim.min.js"></script>*@
+    @*    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>*@
+    @*    <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>*@
+    @**@
+    @*    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>*@
+    @*    <script src="node_modules/systemjs/dist/system.src.js"></script>*@
+    @*    <script src="node_modules/rxjs/bundles/Rx.js"></script>*@
+    @*    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>*@
+    @*    <script src="node_modules/angular2/bundles/http.dev.js"></script>*@
+    @*    <script src="node_modules/angular2/bundles/router.dev.js"></script>*@
+    <!-- <script src="node_modules/angular2/bundles/angular2.js"></script> -->
+    <!-- <script src="node_modules/angular2/bundles/http.js"></script> -->
+    <!-- <script src="node_modules/angular2/bundles/router.js"></script> -->
+    <script src="//code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/jquery.fullPage.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/jquery.fullPage.min.js"></script>
+
+@*    <script lang="javascript" src="app/scripts/jquery-scrollspy.min.js"></script>*@
+
+    <link rel="stylesheet" href="@Url.Content("~/Content/styles.css")">
+
+</head>
+<body>
+    @RenderBody()
+</body>
+</html>

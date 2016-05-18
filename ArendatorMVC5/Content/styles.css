@@ -1,0 +1,147 @@
+﻿@font-face {
+  font-family: HelveticaNeueCyrUltraLight;
+  src: url("fonts/HelveticaNeueCyr-UltraLight.otf");
+}
+
+html {
+  font-family: "HelveticaNeueCyrUltraLight";
+}
+
+nav {
+  background-color: #42b5d5;
+  z-index: 9;
+}
+
+nav img {
+  width: 64px;
+}
+
+.slider .slides {
+  background-color: white;
+}
+
+.custom-slider {
+    height: 420px;
+}
+
+@media screen and (max-device-width: 1259px) {
+  .custom-slider {
+      height: 55%;
+  }
+}
+
+.slider .slides li img {
+    max-width: 23.33333333333333em;
+    height: auto;
+}
+
+.slider .slides li .caption {
+  top: 5%;
+}
+
+.slider .col.m4 {
+  /*padding-top: 20%;*/
+}
+
+.slider .indicators .indicator-item.active {
+  background-color: #42b5d5;
+}
+
+.parallax-custom-size-1 {
+  height: 700px;
+}
+
+.fp-controlArrow.fp-next {
+  border-left-color: black;
+}
+
+.image-logo-div {
+  background: url("images/background.png") center;
+  height: 630px;
+  padding-top: 3.1333em;
+}
+
+.main-header {
+  font-size: 3.3333em;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.028em;
+  margin: 0;
+}
+
+.suggestion-header {
+  font-size: 2.6666em;
+  color: #42b5d5;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 22px;
+}
+
+.carousel-caption {  
+  color: #42b5d5;
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.image-google-play {
+  width: 11.8em;
+}
+
+.slider .indicators .indicator-item {
+  margin: 0 0.333em;
+}
+
+.logo {
+  height: 40%;
+  opacity: 0.7;
+}
+
+.logo-div {
+  margin-top: 65px;
+}
+
+@media (max-width: 425px) { 
+  .main-header {
+    font-size: 2em;
+  }
+  
+    .custom-slider {
+      height: 60%;
+  }
+  
+  .image-logo-div {
+    height: 500px;
+  }
+}
+
+@media (max-width: 320px) {
+  
+  .carousel-caption {    
+    font-size: 1.69em;
+  }
+  
+    .custom-slider {
+      height: 47%;
+  }
+}
+
+@media (min-width: 993px) {
+  
+  .carousel-caption {
+    margin-top: 55%;
+  }
+}
+
+@media (min-width: 1265px) {  
+  .image-logo-div {
+    background: url("images/background-large.png") center;
+  }
+}
+
+@media (min-width: 1265px) {  
+  .image-logo-div {
+    background: url("images/background-large.png") center;
+  }
+}
