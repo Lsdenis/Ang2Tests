@@ -5,7 +5,7 @@
     var $width = "450px";
     var $deviceWidth = $(window).width();
 
-    if ($deviceWidth <= 375) {
+    if ($deviceWidth <= 340) {
         $width = "370px";
     }
     else if ($deviceWidth <= 1024) {
